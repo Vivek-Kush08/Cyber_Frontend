@@ -37,7 +37,7 @@ const Simulation = ({ value }: any) => {
       <Box mx={{ base: 6, md: 20, lg: 60 }}>
         <Heading textAlign="center" mt={4} mb={8} fontWeight={500}>
           <Text color={"red"}> 🚨 Alert !!!</Text>
-          You were just phished by a simulated attack from a security training
+          You were just phished by a simulated attack from a security awareness
           program.
         </Heading>
         <Grid
@@ -58,6 +58,7 @@ const Simulation = ({ value }: any) => {
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}
           mb={8}
           alignItems={"center"}
+          mt={{ base: "1rem", md: "none" }}
         >
           <Image src={Qr} w={{ base: "100%", md: "20rem" }} />
 
@@ -98,8 +99,8 @@ const Simulation = ({ value }: any) => {
           <Flex align="center" direction={{ base: "column", md: "unset" }}>
             <Image src={Scam} w={40} mr={4} rounded={8} />
             <Text color="white" fontSize="lg">
-              QR code scams, also known as QRishing, are a type of fraud where a
-              scammer provides a QR code that leads to a malicious website,
+              QR code scams, also known as Quishing , are a type of fraud where
+              a scammer provides a QR code that leads to a malicious website,
               instead of the expected resource. When scanned, these deceptive QR
               codes can download malware onto your device or lead you to
               phishing websites designed to steal your personal information.
