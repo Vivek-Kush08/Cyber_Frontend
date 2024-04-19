@@ -2,20 +2,33 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Simulation from "./component/Simulation";
 import { useState } from "react";
 import Login from "./component/Login";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Admin from "./component/Admin";
 
 export const App = () => {
-  const [showPage, setShowPage] = useState<any>(true);
+  const [showPage, setShowPage] = useState(true);
+  const [value, setValue] = useState();
 
-  const [value, setValue] = useState<any>();
 
   console.log("response in login", value);
 
   return (
     <ChakraProvider>
-      {showPage === true && (
-        <Login setShowPage={setShowPage} setResponse={setValue} />
-      )}
-      {showPage === false && <Simulation value={value} />}
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              showPage ? (
+                <Login setShowPage={setShowPage} setResponse={setValue} />
+              ) : (
+                <Simulation value={value} />
+              )
+            }
+          />
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   );
 };

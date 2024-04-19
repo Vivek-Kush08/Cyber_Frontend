@@ -13,18 +13,18 @@ import LoginBg from "./abc.jpg";
 
 const Login = ({ setShowPage, setResponse }: any) => {
   // const backendUrl = "http://localhost:5000/";
-  const backendUrl = "https://cyber-alpha.vercel.app/";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-
+  
+  const backendUrl = "https://cyber-alpha.vercel.app/";
   useEffect(() => {
     // console.log("login page");
     fetch(`${backendUrl}`)
       .then((response) => response.json())
       .then((data) => {
         // Handle response data
-        console.log(data);
+        // console.log(data);
         setResponse(data);
       })
       .catch((error) => {
@@ -65,12 +65,13 @@ const Login = ({ setShowPage, setResponse }: any) => {
             Sign In
           </Heading>
           <FormControl id="email" isRequired>
-            <FormLabel>Email address</FormLabel>
+            <FormLabel color={'black'}>Email address</FormLabel>
             <Input
               type="email"
               value={email}
               border={"1px solid gray"}
               onChange={(e) => setEmail(e.target.value)}
+              color={'black'}
             />
           </FormControl>
           {/* <FormControl id="password" mt={4} isRequired>

@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
 import {
   Box,
   Center,
-  Checkbox,
   Flex,
   Grid,
   Heading,
   Image,
   Text,
 } from "@chakra-ui/react";
-import Qr from "./QR.svg";
-import Thank from "./thank.jpg";
-import Scam from "./scam.jpg";
+import { useEffect, useState } from "react";
 import feelingSorry from "./Feeling-sorry.png";
+import Qr from "./QR.svg";
+import Scam from "./scam.jpg";
+import Thank from "./thank.jpg";
 
 const Simulation = ({ value }: any) => {
   const [loginCount, setLoginCount] = useState<any>(0);
@@ -30,16 +29,20 @@ const Simulation = ({ value }: any) => {
       });
   }, []);
 
-  console.log("loginCount", loginCount.loginCount);
+  // console.log("loginCount", loginCount.loginCount);
 
   return (
     <Center>
       <Box mx={{ base: 6, md: 20, lg: 60 }}>
         <Heading textAlign="center" mt={4} mb={8} fontWeight={500}>
-          <Text color={"red"}> 🚨 Alert !!!</Text>
-          You were just phished by a simulated attack from a security awareness
-          program.
+          <Text color={"red"} fontWeight={700}>
+            {" "}
+            👻 Gotcha !!!
+          </Text>
+          You were spoofed by a simulated attack.
+          <p>😂😂</p>
         </Heading>
+
         <Grid
           templateColumns={{ base: "1fr", md: "1fr 1fr" }}
           alignItems={"center"}
@@ -50,7 +53,8 @@ const Simulation = ({ value }: any) => {
             textAlign={{ base: "start", md: "end" }}
             fontWeight={700}
           >
-            It's Okay! You're human. So lets learn from this.{" "}
+            Don't Worry ! You're human. So lets take this opportunity to learn
+            something from this.
           </Text>
           <Image src={feelingSorry} w={{ base: "100%", md: "20rem" }} />
         </Grid>
@@ -74,7 +78,7 @@ const Simulation = ({ value }: any) => {
           </Text>
         </Grid>
 
-        <Box mb={8}>
+        <Box mb={8} color={"black"}>
           <Box mb={4} shadow="xl" p={6} bg="blue.50" rounded={8}>
             <Heading fontSize="2xl" mb={4}>
               Purpose
@@ -108,7 +112,7 @@ const Simulation = ({ value }: any) => {
           </Flex>
         </Box>
 
-        <Box p={6} bg="blue.50" rounded={8} mb={8}>
+        {/* <Box p={6} bg="blue.50" rounded={8} mb={8}>
           <Checkbox textDecoration="underline" size="lg" defaultChecked>
             Accept Terms
           </Checkbox>
@@ -118,7 +122,7 @@ const Simulation = ({ value }: any) => {
             confidential and secure. It will be removed from our records once
             the research study is completed.
           </Text>
-        </Box>
+        </Box> */}
 
         <Flex direction="column" align="center" mb={8}>
           <Heading fontSize="2xl" textAlign="center" mb={4}>
@@ -131,7 +135,7 @@ const Simulation = ({ value }: any) => {
           <Image src={Thank} w={40} />
         </Flex>
 
-        <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
+        {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
           <Box bg="telegram.500" p={6} rounded={8}>
             <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
               Number of Visits
@@ -146,7 +150,7 @@ const Simulation = ({ value }: any) => {
           </Box>
           <Box bg="telegram.500" p={6} rounded={8}>
             <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
-              Number of Sign Ups
+              Number of Sign In
             </Heading>
             <Heading fontSize="4xl" textAlign="center" color="white" mb={4}>
               {loginCount?.loginCount || "NA"}
@@ -156,7 +160,7 @@ const Simulation = ({ value }: any) => {
               the QR code but haven't signed in on this website.
             </Text>
           </Box>
-        </Grid>
+        </Grid> */}
       </Box>
     </Center>
   );
