@@ -79,7 +79,7 @@ const Simulation = ({ value }: any) => {
         </Grid>
 
         <Box mb={8} color={"black"}>
-          <Box mb={4} shadow="xl" p={6} bg="blue.50" rounded={8}>
+          <Box mb={4} shadow="xl" p={6} bg="blue.100" rounded={8}>
             <Heading fontSize="2xl" mb={4}>
               Purpose
             </Heading>
@@ -88,18 +88,23 @@ const Simulation = ({ value }: any) => {
               encountering QR codes in the wild.
             </Text>
           </Box>
-          <Box shadow="xl" p={6} bg="blue.50" rounded={8}>
+          <Box shadow="xl" p={6} bg="blue.100" rounded={8}>
             <Heading fontSize="2xl" mb={4}>
               Your Participation
             </Heading>
             <Text>
-              Your participation is voluntary and anonymous. No personal
-              information will be collected without your consent.
+              Your data and personal information remain secure as nothing has
+              been compromised; this is merely a simulation and not an actual
+              breach. However, it's crucial to understand how spoofing occurs
+              and to take measures to safeguard your personal information from
+              potential theft or compromise. Since you're here, let's seize this
+              opportunity to delve into a few key aspects of this topic and
+              enhance our understanding.
             </Text>
           </Box>
         </Box>
 
-        <Box p={6} bg="green.400" rounded={8} mb={8}>
+        <Box p={6} bg="teal.300" rounded={8} mb={8}>
           <Flex align="center" direction={{ base: "column", md: "unset" }}>
             <Image src={Scam} w={40} mr={4} rounded={8} />
             <Text color="white" fontSize="lg">
@@ -135,7 +140,7 @@ const Simulation = ({ value }: any) => {
           <Image src={Thank} w={40} />
         </Flex>
 
-        {/* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
+        <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
           <Box bg="telegram.500" p={6} rounded={8}>
             <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
               Number of Visits
@@ -157,10 +162,10 @@ const Simulation = ({ value }: any) => {
             </Heading>
             <Text color="white" fontSize="lg" textAlign="center">
               This indicates the total number of individuals who have scanned
-              the QR code but haven't signed in on this website.
+              the QR code and signed in with their email.
             </Text>
           </Box>
-        </Grid> */}
+        </Grid>
       </Box>
     </Center>
   );

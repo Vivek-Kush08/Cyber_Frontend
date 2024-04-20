@@ -26,7 +26,7 @@ export const App = () => {
               )
             }
           />
-          <Route path="/admin" element={<Admin />} />
+          {/* <Route path="/admin" element={<Admin />} /> */}
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
