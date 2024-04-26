@@ -37,10 +37,9 @@ const Simulation = ({ value }: any) => {
         <Heading textAlign="center" mt={4} mb={8} fontWeight={500}>
           <Text color={"red"} fontWeight={700}>
             {" "}
-            👻 Gotcha !!!
+             Gotcha !!!
           </Text>
           You were spoofed by a simulated attack.
-          <p>😂😂</p>
         </Heading>
 
         <Grid
