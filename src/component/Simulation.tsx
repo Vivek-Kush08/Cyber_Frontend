@@ -120,7 +120,7 @@ const Simulation = ({ value }: any) => {
           </Flex>
         </Box>
 
-        <Box p={6} bg="telegram.500" rounded={8} mb={8} fontSize={"md"}>
+        <Box p={6} bg="telegram.500" rounded={8} mb={8} color={'white'}>
           <Heading fontSize="3xl" mb={4}>
             Preventive Measures
           </Heading>
