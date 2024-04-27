@@ -5,6 +5,9 @@ import {
   Grid,
   Heading,
   Image,
+  List,
+  ListIcon,
+  ListItem,
   Text,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
@@ -12,6 +15,7 @@ import feelingSorry from "./Feeling-sorry.png";
 import Qr from "./QR.svg";
 import Scam from "./scam.jpg";
 import Thank from "./thank.jpg";
+import { CheckIcon } from "@chakra-ui/icons";
 
 const Simulation = ({ value }: any) => {
   const [loginCount, setLoginCount] = useState<any>(0);
@@ -37,7 +41,7 @@ const Simulation = ({ value }: any) => {
         <Heading textAlign="center" mt={4} mb={8} fontWeight={500}>
           <Text color={"red"} fontWeight={700}>
             {" "}
-             Gotcha !!!
+            Gotcha !!!
           </Text>
           You were spoofed by a simulated attack.
         </Heading>
@@ -103,7 +107,7 @@ const Simulation = ({ value }: any) => {
           </Box>
         </Box>
 
-        <Box p={6} bg="teal.300" rounded={8} mb={8}>
+        <Box p={6} bg="telegram.500" rounded={8} mb={8}>
           <Flex align="center" direction={{ base: "column", md: "unset" }}>
             <Image src={Scam} w={40} mr={4} rounded={8} />
             <Text color="white" fontSize="lg">
@@ -114,6 +118,39 @@ const Simulation = ({ value }: any) => {
               phishing websites designed to steal your personal information.
             </Text>
           </Flex>
+        </Box>
+
+        <Box p={6} bg="telegram.500" rounded={8} mb={8} fontSize={"md"}>
+          <Heading fontSize="3xl" mb={4}>
+            Preventive Measures
+          </Heading>
+          <List spacing={2}>
+            <ListItem>
+              <ListIcon as={CheckIcon} />
+              Verify the Source: Only scan QR codes from trusted sources to
+              avoid malicious ones.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={CheckIcon} />
+              Educate Yourself: Learn about QR code scams and stay informed to
+              recognize potential threats.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={CheckIcon} />
+              Use Secure Scanner Apps: Download reputable QR code scanner apps
+              to detect malicious codes.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={CheckIcon} />
+              Beware of Phishing Tactics: Be cautious of QR codes promising
+              unrealistic rewards or asking for personal information.
+            </ListItem>
+            <ListItem>
+              <ListIcon as={CheckIcon} />
+              Update Software Regularly: Keep your device's software up to date
+              to protect against vulnerabilities.
+            </ListItem>
+          </List>
         </Box>
 
         {/* <Box p={6} bg="blue.50" rounded={8} mb={8}>
@@ -138,36 +175,38 @@ const Simulation = ({ value }: any) => {
           </Text>
           <Image src={Thank} w={40} />
         </Flex>
-
-        <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
-          <Box bg="telegram.500" p={6} rounded={8}>
-            <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
-              Number of Visits
-            </Heading>
-            <Heading fontSize="4xl" textAlign="center" color="white" mb={4}>
-              {value?.visitCount || "NA"}
-            </Heading>
-            <Text color="white" fontSize="lg" textAlign="center">
-              This represents the total count of individuals who have scanned
-              the QR code and subsequently visited this website.
-            </Text>
-          </Box>
-          <Box bg="telegram.500" p={6} rounded={8}>
-            <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
-              Number of Sign In
-            </Heading>
-            <Heading fontSize="4xl" textAlign="center" color="white" mb={4}>
-              {loginCount?.loginCount || "NA"}
-            </Heading>
-            <Text color="white" fontSize="lg" textAlign="center">
-              This indicates the total number of individuals who have scanned
-              the QR code and signed in with their email.
-            </Text>
-          </Box>
-        </Grid>
       </Box>
     </Center>
   );
 };
 
 export default Simulation;
+
+{
+  /* <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={8} mb={8}>
+  <Box bg="telegram.500" p={6} rounded={8}>
+    <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
+      Number of Visits
+    </Heading>
+    <Heading fontSize="4xl" textAlign="center" color="white" mb={4}>
+      {value?.visitCount || "NA"}
+    </Heading>
+    <Text color="white" fontSize="lg" textAlign="center">
+      This represents the total count of individuals who have scanned
+      the QR code and subsequently visited this website.
+    </Text>
+  </Box>
+  <Box bg="telegram.500" p={6} rounded={8}>
+    <Heading fontSize="2xl" textAlign="center" color="white" mb={4}>
+      Number of Sign In
+    </Heading>
+    <Heading fontSize="4xl" textAlign="center" color="white" mb={4}>
+      {loginCount?.loginCount || "NA"}
+    </Heading>
+    <Text color="white" fontSize="lg" textAlign="center">
+      This indicates the total number of individuals who have scanned
+      the QR code and signed in with their email.
+    </Text>
+  </Box>
+</Grid> */
+}

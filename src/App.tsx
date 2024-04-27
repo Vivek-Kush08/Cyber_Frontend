@@ -10,7 +10,7 @@ export const App = () => {
   const [value, setValue] = useState();
 
 
-  console.log("response in login", value);
+  // console.log("response in login", value);
 
   return (
     <ChakraProvider>

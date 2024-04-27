@@ -50,12 +50,13 @@ const Login = ({ setShowPage, setResponse }: any) => {
     // bgSize="contain"
     >
       <Flex
-        bgImage={
-          "https://lh3.googleusercontent.com/p/AF1QipOohekmz8pFD-nV_ZakbWfFqMzvy4AYjswLMdnw=s1360-w1360-h1020"
-        }
+        bgImage={{base:
+          "https://lh3.googleusercontent.com/p/AF1QipOohekmz8pFD-nV_ZakbWfFqMzvy4AYjswLMdnw=s1360-w1360-h1020",
+          md:'https://img.freepik.com/free-photo/high-angle-chicken-meal_23-2148825122.jpg?t=st=1714227611~exp=1714231211~hmac=fe11ee9aa216636f6af9314ba426781e1eb288ff996aba2ff35356cefee807ea&w=996'
+        }}
         bgRepeat="no-repeat"
         bgPos={"center"}
-        bgSize={{ base: "cover", md: "contain" }}
+        bgSize={{ base: "cover", md: "cover" }}
         height="100vh"
         alignItems="center"
         justifyContent="center"
