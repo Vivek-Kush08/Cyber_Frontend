@@ -76,7 +76,7 @@ const Admin = () => {
           </Heading>
           <Text color="white" fontSize="lg" textAlign="center">
             This indicates the total number of individuals who have scanned the
-            QR code but haven't signed in on this website.
+            QR code and also signed in with their email.
           </Text>
         </Box>
       </Grid>
